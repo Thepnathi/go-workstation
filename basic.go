@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	fmt.Println("Hello")
@@ -40,6 +43,11 @@ func main() {
 	}
 	fmt.Println("")
 
+	infinite := true
+	for s := 0; infinite; s++ {
+		infinite = false
+	}
+
 	// ======================
 	// 3. Control Flow
 
@@ -67,10 +75,10 @@ func main() {
 	// ======================
 	// 4. Data Structure
 
+	// This is an array
 	var colours [2]string
 	colours[0] = "Yellow"
 	colours[1] = "Green"
-
 	countries := [3]string{"Albania", "Italy", "UK"}
 
 	for i, country := range countries {
@@ -82,4 +90,70 @@ func main() {
 		fmt.Println(element)
 	}
 
+	fmt.Println("")
+	// This is a slice
+	fruits := []string{"Orange", "Mango", "Bananan"}
+	fruits = append(fruits, "Pear") // Will return a new slice
+
+	productStock := make(map[string]int)
+
+	productStock["Orange"] = 102
+	productStock["Banana"] = 123
+	productStock["Strawberry"] = 0
+	productStock["Mango"] = 78
+	productStock["Durian"] = 122
+
+	delete(productStock, "Durian")
+
+	fmt.Println(productStock)
+	fmt.Println("Orange quantity: " + strconv.Itoa(productStock["Orange"]) + "\n")
+
+	for fruit, quantity := range productStock {
+		fmt.Println("fruit: ", fruit, "quantity: ", quantity)
+	}
+	fmt.Println("")
+
+	// ======================
+	// 4. Functions (see function.go)
+
+	sqr := areaOfSquare(2, 10)
+	fmt.Println(sqr)
+
+	result, err := squareRoot(16)
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
+	}
+
+	resultTwo, err := squareRoot(-1111)
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(resultTwo)
+	}
+	fmt.Println("")
+
+	// ======================
+	// 4. Type (Similar to OOP object) see things.go
+
+	buddy := cat{name: "Buddy", age: 7, eyeColor: "Brown", meow: true}
+	fmt.Println(buddy)
+	fmt.Println(buddy.name + "\n")
+
+	// ======================
+	// 4. Pointers
+
+	// This will get incremented and discarded
+	l := 89
+	fmt.Println(&l) // Give us a pointer to aj
+	errorIncrement(l)
+	fmt.Println(l)
+
+	// We have to pass on the memory address and alternate it
+	m := 99
+	properIncrement(&m)
+	fmt.Println(m)
 }
