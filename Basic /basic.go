@@ -95,6 +95,9 @@ func main() {
 	fruits := []string{"Orange", "Mango", "Bananan"}
 	fruits = append(fruits, "Pear") // Will return a new slice
 
+	fruitsLimited := fruits[1:2]
+	fmt.Println(fruitsLimited)
+
 	productStock := make(map[string]int)
 
 	productStock["Orange"] = 102
