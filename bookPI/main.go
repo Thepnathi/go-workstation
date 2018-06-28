@@ -11,6 +11,11 @@ func main() {
 	// Init the Router
 	router := mux.NewRouter()
 
+	// Mock data - @todo - implement DB
+	books = append(books, Book{ID: "1", Isbn: "8282", Title: "Book one", Author: &Author{Firstname: "John", Surname: "Doe"}})
+	books = append(books, Book{ID: "2", Isbn: "1233", Title: "Book Two", Author: &Author{Firstname: "Max", Surname: "Jso"}})
+	books = append(books, Book{ID: "3", Isbn: "8229", Title: "Book Three", Author: &Author{Firstname: "Eva", Surname: "Knight"}})
+
 	// Route Handler / Endpoints
 	router.HandleFunc("/api/books", getBooks).Methods("GET")
 	router.HandleFunc("/api/books/{id}", getBook).Methods("GET")
