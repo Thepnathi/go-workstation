@@ -9,10 +9,10 @@ type cat struct {
 	meow     bool
 }
 
-type car struct {
-	name           string
-	manufacture    string
-	releasedDate   string
-	cost           float64
-	availableColor [99]string
-}
+// type car struct {
+// 	name           string
+// 	manufacture    string
+// 	releasedDate   string
+// 	cost           float64
+// 	availableColor [99]string
+// }
