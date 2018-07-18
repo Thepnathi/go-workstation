@@ -49,9 +49,9 @@ func main() {
 
 	afford1, owner1, car1, diff1 := affordThatCar(Eva, Fiesta, F430)
 
-	if afford1 == true {
-		fmt.Println(owner1.name + " can afford " + car1.name + " with a spare budget of " + strconv.FormatFloat(diff1, 'f', 6, 64))
-	}
+	remaining := strconv.FormatFloat(diff1, 'f', 2, 64)
 
-	fmt.Println("Hello World")
+	if afford1 == true {
+		fmt.Printf("%s can afford %s with a remaining budget of £%s\n", owner1.name, car1.name, remaining)
+	}
 }
