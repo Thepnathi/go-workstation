@@ -21,6 +21,7 @@ func area(r Rectangle) float64 {
 // EXAMPLE 2
 // A method has a type
 
+
 func main() {
 	r1 := Rectangle{10, 5}
 	fmt.Println(area(r1))
