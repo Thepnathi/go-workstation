@@ -13,7 +13,7 @@ func multiplyTwo(x, y int) int {
 }
 
 func movieInformation(movie string) (int, bool, string) {
-	var productionCost int = 0
+	var productionCost int
 	var englishLanguage bool = false
 	var director string = "Unknown"
 
@@ -36,7 +36,7 @@ func location(city string) (region, continent string) {
 	return
 }
 
-func main() {
+func funcFunc() {
 	region, continent := location("Santa Monica")
 	fmt.Printf("Matt lives in %s, %s", region, continent)
 }

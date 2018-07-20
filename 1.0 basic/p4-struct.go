@@ -25,5 +25,3 @@ func newStruct() {
 		age  int
 	}{"Tommy", 23}
 }
-
-func affordThatCar()
