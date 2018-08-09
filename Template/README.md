@@ -1,0 +1,1 @@
+The {{.}} or dot character is known as the dot action. It refers to data be passed into the template. 
