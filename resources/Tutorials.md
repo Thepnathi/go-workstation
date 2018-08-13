@@ -28,3 +28,6 @@ http://www.blog.labouardy.com/category/go/
 
 https://itnext.io/structuring-a-production-grade-rest-api-in-golang-c0229b3feedc
 
+### Golang template cheatsheet
+
+https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet#creating
