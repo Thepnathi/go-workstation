@@ -1,0 +1,9 @@
+{
+    "ServerName": "Super Pizza Pineapple",
+    "Database": {
+        "Name": "hello",
+        "Host": "127.0.0.1",
+        "Username": "Tux",
+        "Password": "Tummy"
+    }
+}
